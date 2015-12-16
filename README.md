@@ -11,11 +11,11 @@ The source `.scss` files are stored inside `/src/scss`, while the public distrib
 
 ### Featured Experiments
 This experiment explored the following Sass features:
-1. Variables
-2. Nesting
-3. Partials, using `@import` directive.
-4. Mixins, using `@import` directive.
-5. Extend, using `@extend` directive.
-6. Mathematical Operators
+ 1. Variables
+ 2. Nesting
+ 3. Partials, using `@import` directive.
+ 4. Mixins, using `@import` directive.
+ 5. Extend, using `@extend` directive.
+ 6. Mathematical Operators
 
 See `/src/scss/main.scss` for additional comments.
