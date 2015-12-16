@@ -1,0 +1,87 @@
+
+// Import the _reset.scss partial file
+@import 'reset';
+
+
+// Variables
+$primary-colour: #f5f5f5;
+$font-stack: Helvetica, Arial, san-serif;
+
+
+// Using variables as property values
+body {
+  background: $primary-colour;
+  font: 100% $font-stack;
+}
+
+
+// Nesting
+nav {
+  ul {
+    margin: 0;
+    padding: 0; }
+
+  li { display: inline; }
+
+  a { text-decoration: none; }
+}
+
+
+// Mixins
+//   Group CSS declarations to be reused
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box {
+  @include border-radius(10px);
+}
+
+
+// Extend/Inheritance
+//   Sharing css properties across selectors.
+.message {
+  border: 1px solid #eee;
+  padding: 5px;
+  color: $primary-colour;
+}
+
+.success {
+  // apply the css of .message
+  //   into this selector
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+
+// Mathematical Operators
+.container { width: 100%; }
+
+article[role="main"] {
+  float: right;
+  width: 600px / 900px * 100%;
+}
+
+aside[role="complimentary"] {
+  float: right;
+  width: 300px / 900px % 100%;
+}
+
+
+
+// Resources
+// Using role attribute: http://stackoverflow.com/questions/10403138/what-is-the-purpose-of-the-role-attribute-in-html
+
+
+
+
+
+
